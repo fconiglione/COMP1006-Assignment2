@@ -13,19 +13,28 @@
 </head>
 <body>
     <header>
-        <h1>
-            <a href="#">PHP To-Do</a>
-        </h1>
+        <a href="home.html">
+            <img id="logo-img"/>
+        </a>
         <nav>
             <ul>
                 <li>
-                    <a href="tasks.php">Tasks</a>
+                    <a href="content-manager.php">Home</a>
                 </li>
                 <li>
-                    <a href="register.php">Register</a>
+                    <a href="about.php">About</a>
                 </li>
                 <li>
-                    <a href="login.php">Login</a>
+                    <a href="services.php">Services</a>
+                </li>
+                <li>
+                    <a href="location.php">Location</a>
+                </li>
+                <li>
+                    <a href="contact.php">Contact</a>
+                </li>
+                <li>
+                    <a href="control-panel.php">Control Panel</a>
                 </li>
             </ul>
         </nav>
