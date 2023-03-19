@@ -16,4 +16,4 @@ require('includes/header-a.php');
         <button class="btnOffset">Save</button>
     </form>
 </main>
-<?php require('includes/footer.php'); ?>
+<?php require('includes/footer-a.php'); ?>
