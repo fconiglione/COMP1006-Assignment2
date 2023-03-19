@@ -18,10 +18,10 @@ require('includes/header-a.php');
             echo '<tr>
                     <td>' . $page['title'] . '</td>
                     <td class="centre">
-                        <a href="edit-page.php?taskId=' . $page['pageId'] . '" title="Edit">
+                        <a href="edit-page.php?pageId=' . $page['pageId'] . '" title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>           
-                        <a href="delete-page.php?taskId=' . $page['pageId'] . '"
+                        <a href="delete-page.php?pageId=' . $page['pageId'] . '"
                             title="Delete" onclick="return confirmDelete();">
                                 <i class="fa-solid fa-trash-can"></i>
                         </a>
