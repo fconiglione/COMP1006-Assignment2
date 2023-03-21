@@ -16,7 +16,7 @@ require 'includes/header-b.php';
             <label for="password">Password:*</label>
             <input type="password" name="password" id="password" required
                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
-            <img src="img/show.png" alt="Show/Hide" id="imgShowHide" onclick="showHide()" />
+            <img src="media/show.png" alt="Show/Hide" id="imgShowHide" onclick="showHide()" />
         </fieldset>
         <fieldset>
             <label for="confirm">Confirm Password: *</label>

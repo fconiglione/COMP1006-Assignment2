@@ -8,11 +8,11 @@ function showHide() {
 
     if (pwInput.type === 'password') {
         pwInput.type = 'text';
-        img.src = 'img/hide.png';
+        img.src = 'media/hide.png';
     }
     else {
         pwInput.type = 'password';
-        img.src = 'img/show.png';
+        img.src = 'media/show.png';
     }
 }
 
