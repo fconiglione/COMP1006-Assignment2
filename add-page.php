@@ -13,7 +13,7 @@ require('includes/header-a.php');
             <label for="content">Content:*</label>
             <textarea name="content" id="content" required></textarea>
         </fieldset>
-        <button class="btnOffset">Save</button>
+        <button class="btn">Save</button>
     </form>
 </main>
 <?php require('includes/footer-a.php'); ?>

@@ -19,13 +19,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="content-manager.php">Content Manager</a>
+                    <a href="content-manager.php">Main Menu</a>
                 </li>
                 <li>
                     <a href="admin.php">Administrators</a>
                 </li>
                 <li>
-                    <a href="editor.php">Editor</a>
+                    <a href="page-list.php">Editor</a>
                 </li>
                 <li>
                     <a href="logo.php">Logo</a>
