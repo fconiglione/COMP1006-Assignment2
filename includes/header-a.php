@@ -19,22 +19,25 @@
         <nav>
             <ul>
                 <li>
-                    <a href="content-manager.php">Home</a>
+                    <a href="content-manager.php">Content Manager</a>
                 </li>
                 <li>
-                    <a href="about.php">About</a>
+                    <a href="admin.php">Administrators</a>
                 </li>
                 <li>
-                    <a href="services.php">Services</a>
+                    <a href="editor.php">Editor</a>
                 </li>
                 <li>
-                    <a href="location.php">Location</a>
+                    <a href="logo.php">Logo</a>
                 </li>
                 <li>
-                    <a href="contact.php">Contact</a>
+                    <a href="index.php">Public Site</a>
                 </li>
                 <li>
-                    <a href="control-panel.php">Control Panel</a>
+                    <a href="register.php">Register</a>
+                </li>
+                <li>
+                    <a href="login.php">Login</a>
                 </li>
             </ul>
         </nav>
