@@ -14,10 +14,9 @@ require('includes/db.php');
         echo '<h1>' . $page['title'] . '</h1>';
         echo '<p>' . $page['content'] . '</p>';
     } else {
-        echo '<h1>Page not found</h1>';
+        header('location:home.php');
     }
 $db = null;
   ?>
-</body>
 
 <?php require('includes/footer-a.php'); ?>
