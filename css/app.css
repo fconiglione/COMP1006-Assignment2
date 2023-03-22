@@ -76,3 +76,43 @@ footer {
 #imgShowHide {
     cursor: pointer;
 }
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 40px auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+thead th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #222222;
+}
+
+td, th {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+td.centre {
+    text-align: center;
+}
+
+.add {
+    padding-left: 10%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+i {
+    color: #222222;
+}
+
+i:hover {
+    color: red;
+}

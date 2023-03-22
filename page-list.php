@@ -4,7 +4,7 @@ require('includes/header-a.php');
 ?>
 <main>
     <h1>Pages</h1>
-    <a href="add-page.php">Add Page</a>
+    <a class = "add" href="add-page.php">Add Page</a>
     <?php
     try {
         require('includes/db.php');
@@ -21,11 +21,13 @@ require('includes/header-a.php');
                         <a href="edit-page.php?pageId=' . $page['pageId'] . '" title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>           
-                        <a href="delete-page.php?pageId=' . $page['pageId'] . '"
-                            title="Delete" onclick="return confirmDelete();">
-                                <i class="fa-solid fa-trash-can"></i>
-                        </a>
-                    </td>
+                        </td>
+                        <td class="centre">
+                            <a href="delete-page.php?pageId=' . $page['pageId'] . '"
+                                title="Delete" onclick="return confirmDelete();">
+                                    <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
                     </tr>';
         }
         echo '</table>';

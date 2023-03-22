@@ -20,11 +20,13 @@ require('includes/header-a.php');
                         <a href="edit-admin.php?userId=' . $user['userId'] . '" title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>           
-                        <a href="delete-admin.php?userId=' . $user['userId'] . '"
-                            title="Delete" onclick="return confirmDelete();">
-                                <i class="fa-solid fa-trash-can"></i>
-                        </a>
                     </td>
+                        <td class="centre">
+                            <a href="delete-admin.php?user=' . $user['userId'] . '"
+                                title="Delete" onclick="return confirmDelete();">
+                                    <i class="fa-solid fa-trash-can"></i>
+                            </a>
+                        </td>
                     </tr>';
         }
         echo '</table>';
