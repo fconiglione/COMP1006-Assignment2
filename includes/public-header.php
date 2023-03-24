@@ -19,20 +19,27 @@
         <nav>
             <ul>
                 <li>
-                    <a href="content-manager.php">Main Menu</a>
+                    <a href="index.php">Home</a>
                 </li>
                 <li>
-                    <a href="admin.php">Administrators</a>
+                    <a href="admin.php">About</a>
                 </li>
                 <li>
-                    <a href="page-list.php">Editor</a>
+                    <a href="page-list.php">Services</a>
                 </li>
                 <li>
-                    <a href="logo.php">Logo</a>
+                    <a href="logo.php">Contact</a>
                 </li>
-                <li>
-                    <a href="index.php">Public Site</a>
-                </li>
+                <?php
+                    require('includes/db.php');
+                    $sql = "SELECT pageId, title, content FROM pages";
+                    $cmd = $db->prepare($sql);
+                    $cmd->execute();
+                    $pages = $cmd->fetchAll();
+                    foreach($pages as $page) {
+                        echo '<li><a href="index.php?pageId=' . $page["pageId"] . '">' . $page["title"] . '</a></li>';
+                    }
+                ?>
                 <li>
                     <a href="register.php">Register</a>
                 </li>

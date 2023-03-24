@@ -24,7 +24,7 @@ else {
     else {
         session_start();
         $_SESSION['user'] = $username;
-        header('location:home.php');
+        header('location:page-list.php');
         exit();
     }
 }

@@ -1,6 +1,8 @@
 <?php
+require('includes/auth.php');
+
 $title = 'Saving Page Details...';
-require('includes/header-a.php');
+require('includes/header.php');
 
 $title = $_POST['title'];
 $content = $_POST['content'];
@@ -26,4 +28,4 @@ if ($validate) {
     echo "Page Saved";
 }
 
-require('includes/footer-a.php'); ?>
+require('includes/footer.php'); ?>

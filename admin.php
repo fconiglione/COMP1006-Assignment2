@@ -1,6 +1,6 @@
 <?php 
 $title = 'Page List';
-require('includes/header-a.php'); 
+require('includes/header.php');
 ?>
 <main>
     <h1>Administrators</h1>
@@ -38,4 +38,4 @@ require('includes/header-a.php');
     }
     ?>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

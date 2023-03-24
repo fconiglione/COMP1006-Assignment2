@@ -1,6 +1,6 @@
 <?php 
 $title = 'Page List';
-require('includes/header-a.php'); 
+require('includes/header.php');
 ?>
 <main>
     <h1>Pages</h1>
@@ -18,7 +18,7 @@ require('includes/header-a.php');
             echo '<tr>
                     <td>' . $page['title'] . '</td>
                     <td class="centre">
-                        <a href="edit-page.php?pageId=' . $page['pageId'] . '" title="Edit">
+                        <a href="edit-page.php?pageId=' . base64_encode($page['pageId']) . '" title="Edit">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>           
                         </td>
@@ -39,4 +39,4 @@ require('includes/header-a.php');
     }
     ?>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

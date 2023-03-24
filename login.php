@@ -1,6 +1,6 @@
 <?php
 $title = 'Login';
-require 'includes/header-b.php';
+require('includes/public-header.php');
 ?>
 <main>
     <h1>Login</h1>
@@ -24,4 +24,4 @@ require 'includes/header-b.php';
         <button class="btn">Login</button>
     </form>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

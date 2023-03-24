@@ -1,4 +1,6 @@
 <?php
+require('includes/auth.php');
+
 $pageId = $_GET['pageId'];
 require('includes/db.php');
 $sql = "DELETE FROM pages WHERE pageId = :pageId";

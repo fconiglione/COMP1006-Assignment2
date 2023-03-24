@@ -1,8 +1,8 @@
 <?php
 $title = 'Content Manager';
-require('includes/header-a.php');
+require('includes/header.php');
 ?>
     <main>
 
     </main>
-    <?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

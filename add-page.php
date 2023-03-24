@@ -1,6 +1,8 @@
 <?php
+require('includes/auth.php');
+
 $title = 'Add a New Page';
-require('includes/header-a.php');
+require('includes/header.php');
 ?>
 <main>
     <h1>Page Details</h1>
@@ -16,4 +18,4 @@ require('includes/header-a.php');
         <button class="btn">Save</button>
     </form>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

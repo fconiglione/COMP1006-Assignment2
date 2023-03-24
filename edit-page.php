@@ -1,8 +1,10 @@
 <?php
-$title = 'Page Details';
-require('includes/header-a.php');
+require('includes/auth.php');
 
-$pageId = $_GET['pageId'];
+$title = 'Page Details';
+require('includes/header.php');
+
+$pageId = base64_decode($_GET['pageId']);
 
 if (empty($pageId) || !is_numeric($pageId)) {
     header('location:400.php');
@@ -38,4 +40,4 @@ $content = $page['content'];
         <input name="pageId" id="pageId" value="<?php echo $pageId; ?>" type="hidden" />
     </form>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>

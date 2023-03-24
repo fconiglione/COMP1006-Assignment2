@@ -17,19 +17,23 @@
             <img id="logo-img" src="./media/logo.png" />
         </a>
         <?php
-        require('includes/db.php');
-        $sql = "SELECT pageId, title, content FROM pages";
-        $cmd = $db->prepare($sql);
-        $cmd->execute();
-        $pages = $cmd->fetchAll();
         echo '<nav>';
         echo '<ul>';
-        foreach($pages as $page) {
-            echo '<li><a href="index.php?pageId=' . $page["pageId"] . '">' . $page["title"] . '</a></li>';
+        if (session_start() == PHP_SESSION_NONE) {
+            session_start();
         }
-        echo '<li><a href="content-manager.php">Admin</a></li>';
-        echo '<li><a href="register.php">Register</a></li>';
-        echo '<li><a href="login.php">Login</a></li>';
+
+        if (empty($_SESSION['user'])) {
+            echo '<li><a href="register.php">Register</a></li>';
+            echo '<li><a href="login.php">Login</a></li>';
+        }
+        else {
+            echo '<li><a href="admin.php">Administrators</a></li>';
+            echo '<li><a href="page-list.php">Page Editor</a></li>';
+            echo '<li><a href="index.php">Public Site</a></li>';
+            echo '<li><a href="#">Welcome ' . $_SESSION['user'] . '. </a></li>'; 
+            echo '<li><a href="logout.php">Logout</a></li>'; 
+        }
         echo '</ul>';
         echo '</nav>';
         $db = null;

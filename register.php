@@ -1,6 +1,6 @@
 <?php
 $title = 'Register';
-require 'includes/header-b.php';
+require('includes/public-header.php');
 ?>
 <main>
     <h1>User Registration</h1>
@@ -27,4 +27,4 @@ require 'includes/header-b.php';
         <button class="btn" onclick="return comparePasswords()">Complete Registration</button>
     </form>
 </main>
-<?php require('includes/footer-a.php'); ?>
+<?php require('includes/footer.php'); ?>
