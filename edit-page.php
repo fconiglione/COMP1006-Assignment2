@@ -34,7 +34,7 @@ $content = $page['content'];
         </fieldset>
         <fieldset>
             <label for="content">Content:</label>
-            <input name="content" id="content" required value="<?php echo $title; ?>" />
+            <input name="content" id="content" required value="<?php echo $content; ?>" />
         </fieldset>
         <button class="btn">Update</button>
         <input name="pageId" id="pageId" value="<?php echo $pageId; ?>" type="hidden" />

@@ -19,13 +19,13 @@ require('includes/header.php');
                     <td>' . $page['title'] . '</td>
                     <td class="centre">
                         <a href="edit-page.php?pageId=' . base64_encode($page['pageId']) . '" title="Edit">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-file-pen"></i>
                         </a>           
                         </td>
                         <td class="centre">
                             <a href="delete-page.php?pageId=' . $page['pageId'] . '"
                                 title="Delete" onclick="return confirmDelete();">
-                                    <i class="fa-solid fa-trash-can"></i>
+                                <i class="fa-solid fa-ban"></i>
                             </a>
                         </td>
                     </tr>';

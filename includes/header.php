@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <a href="home.php">
+        <a href="index.php">
             <img id="logo-img" src="./media/logo.png" />
         </a>
         <?php

@@ -11,20 +11,20 @@ require('includes/header.php');
         $cmd = $db->prepare($sql);
         $cmd->execute();
         $users = $cmd->fetchAll();
-        echo '<table><thead><th>Title</th><th>Edit</th><th>Delete</th>
+        echo '<table><thead><th>User</th><th>Edit</th><th>Delete</th>
                 </thead>';
         foreach ($users as $user) {
             echo '<tr>
                     <td>' . $user['username'] . '</td>
                     <td class="centre">
                         <a href="edit-admin.php?userId=' . $user['userId'] . '" title="Edit">
-                            <i class="fa-solid fa-pen-to-square"></i>
+                        <i class="fa-solid fa-user-pen"></i>
                         </a>           
                     </td>
                         <td class="centre">
                             <a href="delete-admin.php?user=' . $user['userId'] . '"
                                 title="Delete" onclick="return confirmDelete();">
-                                    <i class="fa-solid fa-trash-can"></i>
+                                <i class="fa-solid fa-ban"></i>
                             </a>
                         </td>
                     </tr>';

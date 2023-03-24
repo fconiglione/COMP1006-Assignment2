@@ -13,8 +13,8 @@
 </head>
 <body>
     <header>
-        <a href="home.php">
-            <img id="logo-img" src="./media/logo.png"/>
+        <a href="index.php">
+            <img id="logo-img" src="./media/logo.png" />
         </a>
         <nav>
             <ul>
