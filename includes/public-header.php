@@ -18,19 +18,11 @@
         </a>
         <nav>
             <ul>
-                <li>
-                    <a href="index.php">Home</a>
-                </li>
-                <li>
-                    <a href="admin.php">About</a>
-                </li>
-                <li>
-                    <a href="page-list.php">Services</a>
-                </li>
-                <li>
-                    <a href="logo.php">Contact</a>
-                </li>
                 <?php
+                    if (session_start() == PHP_SESSION_NONE) {
+                        session_start();
+                    }
+
                     require('includes/db.php');
                     $sql = "SELECT pageId, title, content FROM pages";
                     $cmd = $db->prepare($sql);
@@ -39,13 +31,14 @@
                     foreach($pages as $page) {
                         echo '<li><a href="index.php?pageId=' . $page["pageId"] . '">' . $page["title"] . '</a></li>';
                     }
+                    if (!empty($_SESSION['user'])) {
+                        echo '<li><a href="logout.php">Logout</a></li>';
+                    }
+                    else {
+                        echo '<li><a href="register.php">Register</a></li>';
+                        echo '<li><a href="login.php">Login</a></li>';
+                    }
                 ?>
-                <li>
-                    <a href="register.php">Register</a>
-                </li>
-                <li>
-                    <a href="login.php">Login</a>
-                </li>
             </ul>
         </nav>
     </header>

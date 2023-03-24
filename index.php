@@ -14,7 +14,7 @@ if ($page) {
     echo '<h1>' . $page['title'] . '</h1>';
     echo '<p>' . $page['content'] . '</p>';
 } else {
-    header('location:home.php');
+    header('location:index.php?pageId=1');
 }
 $db = null;
   ?>
