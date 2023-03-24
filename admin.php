@@ -17,7 +17,7 @@ require('includes/header.php');
             echo '<tr>
                     <td>' . $user['username'] . '</td>
                     <td class="centre">
-                        <a href="edit-admin.php?userId=' . $user['userId'] . '" title="Edit">
+                        <a href="edit-admin.php?userId=' . base64_encode($user['userId']) . '" title="Edit">
                         <i class="fa-solid fa-user-pen"></i>
                         </a>           
                     </td>

@@ -6,10 +6,10 @@ require('includes/header.php');
 
 $userId = base64_decode($_GET['userId']);
 
-// if (empty($userId) || !is_numeric($userId)) {
-//     header('location:400.php');
-//     exit();
-// }
+if (empty($userId) || !is_numeric($userId)) {
+    header('location:400.php');
+    exit();
+}
 require('includes/db.php');
 $sql = "SELECT * FROM administrators WHERE userId = :userId";
 $cmd = $db->prepare($sql);
@@ -34,5 +34,6 @@ $username = $user['username'];
         <button class="btn">Update</button>
         <input name="userId" id="userId" value="<?php echo $userId; ?>" type="hidden" />
     </form>
+    <h2>For security purposes, passwords <u>cannot</u> be changed or modified.</h2>
 </main>
 <?php require('includes/footer.php'); ?>
