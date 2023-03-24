@@ -8,36 +8,40 @@
 </head>
 <body>
     <?php
+    // Adding the variables
     $title = $_POST['title'];
     $content = $_POST['content'];
-    $validate = true;
     $pageId = $_POST['pageId'];
-
+    // Boolean validation variable
+    $validate = true;
+    // Adding several if statements to confirm proper input
     if (empty($pageId)) {
         echo '<p>Page Id is required.</p>';
         $validate = false;
     }
-
     if (empty($title)) {
         echo '<p>Title is required.</p>';
         $validate = false;
     }
-
     if (empty($content)) {
         echo '<p>Content is required.</p>';
         $validate = false;
     }
-
+    // If the validation passes, then run the code:
     if ($validate) {
+        // DB connection
         require('includes/db.php');
-        $sql = "UPDATE pages SET title = :title, content = :content
-            WHERE pageId = :pageId";
+        // SQL query
+        $sql = "UPDATE pages SET title = :title, content = :content WHERE pageId = :pageId";
         $cmd = $db->prepare($sql);
+        // PDO binding
         $cmd->bindParam(':title', $title, PDO::PARAM_STR, 255);
         $cmd->bindParam(':content', $content, PDO::PARAM_STR);
         $cmd->bindParam(':pageId', $pageId, PDO::PARAM_INT);
         $cmd->execute();
+        // Disconnect form DB
         $db = null;
+        // Confirmation message
         echo "Page Updated";
         header('location:page-list.php');
     }

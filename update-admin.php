@@ -8,29 +8,33 @@
 </head>
 <body>
     <?php
+    // Adding the variables
     $user = $_POST['username'];
-    $validate = true;
     $userId = $_POST['userId'];
-
+    // Boolean validation variable
+    $validate = true;
+    // Adding several if statements to confirm proper input
     if (empty($userId)) {
         echo '<p>User Id is required.</p>';
         $validate = false;
     }
-
     if (empty($user)) {
         echo '<p>User is required.</p>';
         $validate = false;
     }
-
+    // If the validation passes, then run the code:
     if ($validate) {
+        // Require the database conenction
         require('includes/db.php');
-        $sql = "UPDATE administrators SET username = :username
-            WHERE userId = :userId";
+        $sql = "UPDATE administrators SET username = :username WHERE userId = :userId";
         $cmd = $db->prepare($sql);
+        // PDO parameters
         $cmd->bindParam(':username', $user, PDO::PARAM_STR, 255);
         $cmd->bindParam(':userId', $userId, PDO::PARAM_INT);
         $cmd->execute();
+        // DB disconnect
         $db = null;
+        // Confirmation message
         echo "Administrator Updated";
         header('location:admin.php');
     }

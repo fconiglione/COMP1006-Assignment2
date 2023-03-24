@@ -1,4 +1,5 @@
 <?php
+// Creating the title and adding the public header
 $title = 'Login';
 require('includes/public-header.php');
 ?>
@@ -11,17 +12,21 @@ require('includes/public-header.php');
     else {
         echo '<h5>Please enter your login information.</h5>';
     }
-    ?>        
-    <form method="POST" action="validate.php">
+    ?>
+    <!-- Actioning the validate.php page -->
+    <form action="validate.php" method="POST">
         <fieldset>
             <label for="username">Username:</label>
-            <input name="username" id="username" required type="email" placeholder="johndoe@email.com" />
+            <!-- Required field and placeholder -->
+            <input name="username" id="username" required type="email" placeholder="johndoe@webmail.com" />
         </fieldset>
         <fieldset>
             <label for="password">Password:</label>
-            <input type="password" name="password" id="password" required />
+            <!-- Password required -->
+            <input type="password" name="password" id="password" required placeholder="********" />
         </fieldset>
         <button class="btn">Login</button>
     </form>
 </main>
+<!-- Adding the footer -->
 <?php require('includes/footer.php'); ?>
