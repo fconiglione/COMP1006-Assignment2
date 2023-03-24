@@ -29,7 +29,7 @@ require('includes/header.php');
                         </a>           
                     </td>
                         <td>
-                            <a href="delete-admin.php?user=' . $user['userId'] . '"
+                            <a href="delete-admin.php?userId=' . $user['userId'] . '"
                                 title="Delete" onclick="return confirmDelete();">
                                 <i class="fa-solid fa-ban"></i>
                             </a>

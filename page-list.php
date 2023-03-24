@@ -5,6 +5,7 @@ require('includes/header.php');
 ?>
 <main>
     <h1>Pages</h1>
+    <p><i>Edit or delete any of the pages below.</i></p>
     <!-- Actioning the add-page.php file when submitted -->
     <a class = "add" href="add-page.php">Add Page</a>
     <?php

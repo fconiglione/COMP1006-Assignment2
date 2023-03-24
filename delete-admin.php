@@ -1,4 +1,6 @@
 <?php
+// Checking user permissions
+require('includes/auth.php');
 // Getting the existing userId
 $userId = $_GET['userId'];
 // Connecting to the database
@@ -11,7 +13,6 @@ $cmd->bindParam(':userId', $userId, PDO::PARAM_INT);
 $cmd->execute();
 // Disconnecting from the database
 $db = null;
-// Confirmation message and navigation
-echo '<p>Administrator Deleted</p>
-    <a href="admin.php">See The Updated Administrators List</a>';
-header('location:admin.php'); ?>
+// Redirect to updated list
+header('location:admin.php');
+?>

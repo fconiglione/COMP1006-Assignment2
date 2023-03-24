@@ -13,9 +13,6 @@ $cmd->bindParam(':pageId', $pageId, PDO::PARAM_INT);
 $cmd->execute();
 // Disconnecting
 $db = null;
-// Giving confirmation
-echo '<p>Page Deleted</p>
-    <a href="page-list.php">See The Updated Page List</a>';
-
+// Redirect to updated list
 header('location:page-list.php');
 ?>

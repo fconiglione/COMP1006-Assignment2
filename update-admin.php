@@ -36,7 +36,8 @@
         $db = null;
         // Confirmation message
         echo "Administrator Updated";
-        header('location:admin.php');
+        // Forcing a logout after the username change
+        header('location:logout.php');
     }
     ?>
 </body>
